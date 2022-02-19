@@ -44,7 +44,13 @@ class TestCredentials(unittest.TestCase):
         """ 
         self.assertEqual(self.new_credentials.account,'Gmail') 
         self.assertEqual(self.new_credentials.userName,'musyoka_sieva') 
-        self.assertEqual(self.new_credentials.password,'zxcvbnm')   
+        self.assertEqual(self.new_credentials.password,'zxcvbnm') 
+    def save_credential_test(self):
+        """
+        test case to see if credentials have been saved
+        """ 
+        self.new_credentials.save_details()
+        self.assertEqual(len(Credentials.credentials_list),1)    
 
 
 
