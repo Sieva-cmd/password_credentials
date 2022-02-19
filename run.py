@@ -104,7 +104,19 @@ def passlocker():
             print("Account name: ")
             account = input().lower()
             print("Your Account username")
-            userName =input()   
+            userName =input()  
+            while True:
+                print("TP --To type your own password : \n GP - to generate random password")
+                password_Choice = input().lower().strip()
+                if password_Choice =='tp':
+                    password =input("Enter your own password \n")
+                    break
+                elif password_Choice =='gp':
+                    password =generate_password()
+                    break
+                else:
+                    print("Invalid password !. please try again")
+                 
         
                 
     
