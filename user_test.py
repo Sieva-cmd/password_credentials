@@ -66,7 +66,17 @@ class TestCredentials(unittest.TestCase):
         test_credential =Credentials("Twitter","sieva musyoka",'zxcvbnm') 
         test_credential.save_details()
         self.assertEqual(len(Credentials.credentials_list),2)
-               
+    
+    def test_delete_credential(self):
+        """
+        test method to test whether we can delete credentials
+        """ 
+        self.new_credentials.save_details()
+        test_credential =Credentials("Facebook",'sieva Lucia','zxcvbnm')
+        test_credential.save_details()
+        self.new_credentials.delete_credentials()
+        self.assertEqual(len(Credentials.credentials_list),1)
+                  
 
 
 
