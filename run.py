@@ -67,4 +67,16 @@ def passlocker():
     short_code =input("").lower().strip()
     if short_code =="ca":
         print("Sign Up")
+        print('*' *50)
+        username =input("username: ")
+        while True:
+            print("TP -To type your own password:\n GP -To generate random password")
+            password_Choice =input().lower().strip()
+            if password_Choice =='tp':
+                password = input("Enter password\n")
+                break
+            elif password_Choice =='gp':
+                password =generate_password()
+                break
+            
     
