@@ -78,5 +78,12 @@ def passlocker():
             elif password_Choice =='gp':
                 password =generate_password()
                 break
-            
+            else:
+                print("Invalid password please try again")
+        save_user(create_new_user(username,password))
+        print("*"*85)
+        print(f"Hello {username}, Your account has been created successfully!")
+        print("*"*85)
+        
+                
     
