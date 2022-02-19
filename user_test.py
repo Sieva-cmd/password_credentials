@@ -1,3 +1,4 @@
+from cgi import test
 import unittest
 from user import User
 from user import Credentials
@@ -76,7 +77,16 @@ class TestCredentials(unittest.TestCase):
         test_credential.save_details()
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentials_list),1)
-                  
+    def test_find_credentials(self):
+        """
+        test to check if we can find a credential by account name and display details
+        """ 
+        self.new_credentials.save_details()
+        test_credential =Credentials("Twitter","sieva Lucia","zxcvbnm")
+        test_credential.save_details()
+        
+        found_credential =Credentials.find_credentialls("Twitter")  
+        self.assertEqual(found_credential.account,test_credential.account)           
 
 
 
