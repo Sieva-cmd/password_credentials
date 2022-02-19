@@ -34,8 +34,17 @@ class TestCredentials(unittest.TestCase):
     
     def setUp(self):
         """
+        Method that runs before each credential test case runs
+        """  
+        self.new_credentials =Credentials('Gmail','musyoka_sieva','zxcvbnm')  
         
-        """     
+    def test_init(self):
+        """
+        test case to check if new credentials have ben initialized correctly
+        """ 
+        self.assertEqual(self.new_credentials.account,'Gmail') 
+        self.assertEqual(self.new_credentials.userName,'musyoka_sieva') 
+        self.assertEqual(self.new_credentials.password,'zxcvbnm')   
 
 
 
