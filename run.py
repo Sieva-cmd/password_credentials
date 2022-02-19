@@ -46,5 +46,25 @@ def delete_credentials(credentials):
     delete credentials from credential list
     """
     credentials.delete_credentials()
-        
+def find_credentials(account):
+    """
+    fumction that check if a credentials exists with that username and return true or false
+    """
+    return Credentials.if_credential_exist(account)  
+def generate_password():
+    """
+    generates a random password for user
+    """  
+    auto_password =Credentials.generated_password()
+    return auto_password
+def copy_password(account):
+    """
+    function to copy password using pyperclip
+    """   
+    return Credentials.copy_password(account)
+def passlocker():
+    print("Welcome to password Locker . \n Choose one of the following to proceed .\n CA --Create New acount. \n LI ---have an account ") 
+    short_code =input("").lower().strip()
+    if short_code =="ca":
+        print("Sign Up")
     
