@@ -27,6 +27,17 @@ class TestClass(unittest.TestCase):
         self.assertEqual(len(User.user_list),1)   
 
 
+class TestCredentials(unittest.TestCase):
+    """
+    Test case for credentential model class
+    """   
+    
+    def setUp(self):
+        """
+        
+        """     
+
+
 
 
 
