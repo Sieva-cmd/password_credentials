@@ -50,7 +50,23 @@ class TestCredentials(unittest.TestCase):
         test case to see if credentials have been saved
         """ 
         self.new_credentials.save_details()
-        self.assertEqual(len(Credentials.credentials_list),1)    
+        self.assertEqual(len(Credentials.credentials_list),1)
+        
+    def tearDown(self):
+        """
+        method that does clean up after test case has run
+        """
+        Credentials.credentials_list =[]
+        
+    def test_save_many_accounts(self):
+        """
+        Test to check if we can save multiple account credentials
+        """   
+        self.new_credentials.save_details()
+        test_credential =Credentials("Twitter","sieva musyoka",'zxcvbnm') 
+        test_credential.save_details()
+        self.assertEqual(len(Credentials.credentials_list),2)
+               
 
 
 
