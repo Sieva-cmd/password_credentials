@@ -102,7 +102,7 @@ class TestCredentials(unittest.TestCase):
         """
         test to display all credentials
         """  
-        self.assertEqual(Credentials.display_crdentials(),Credentials.credentials_list)             
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)             
 
 
 

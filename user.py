@@ -79,7 +79,7 @@ class Credentials():
         method that takes in account_name and returns a credentials that matvh account name
         """  
         for credential in cls.credentials_list:
-            if credential.account ==account:
+            if credential.account == account:
                 return credential
             
     @classmethod
@@ -94,13 +94,13 @@ class Credentials():
          method that checks if a credential exists from the crdential list and returns true or false depending if the credential exists.
         """ 
         for credential in cls.credentials_list:
-            if credential.account ==account:
+            if credential.account == account:
                 return True
         return False
         
         
     @classmethod
-    def display_crdentials(cls):
+    def display_credentials(cls):
         """
         method that returns all items in credential list
         """ 
