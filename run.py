@@ -63,7 +63,7 @@ def copy_password(account):
     """   
     return Credentials.copy_password(account)
 def passlocker():
-    print("Welcome to password Locker . \n Choose one of the following to proceed .\n CA --Create New acount. \n LI ---have an account ") 
+    print("Welcome to password Locker . \n Choose one of the following to proceed .\n CA --Create New acount. \n LG ---To log in ") 
     short_code =input("").lower().strip()
     if short_code =="ca":
         print("Sign Up")
@@ -84,6 +84,17 @@ def passlocker():
         print("*"*85)
         print(f"Hello {username}, Your account has been created successfully!")
         print("*"*85)
+    
+    elif short_code =='lg':
+        print("*"*50)
+        print("Enter your username and your password to login: ")
+        print("*"*50)  
+        username =input("Username: ")
+        password =input("Password: ")
+        login =login_user(username,password)
+        if login_user == login:
+            print(f"Hello {username}. Welcome To password Locker manager")
+            print('\n')  
         
                 
     
