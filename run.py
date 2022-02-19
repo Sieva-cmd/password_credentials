@@ -94,7 +94,17 @@ def passlocker():
         login =login_user(username,password)
         if login_user == login:
             print(f"Hello {username}. Welcome To password Locker manager")
-            print('\n')  
+            print('\n') 
+    while True:
+        print("Use these short codes:\n CC --Create a new account.\n DC -Display Credentials. \n FC-- find credential. \n GP-generate random password. \n DL-Delete credential. \n Ex -Exit the application. \n")      
+        short_code =input().lower().strip()
+        if short_code =='cc':
+            print("Create New Credential")
+            print("."*20)
+            print("Account name: ")
+            account = input().lower()
+            print("Your Account username")
+            userName =input()   
         
                 
     
