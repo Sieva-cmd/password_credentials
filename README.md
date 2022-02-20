@@ -68,7 +68,7 @@ Currently there are no known bugs, but incase of any reach to me through musyoka
 ## Licence 
  MIT License ()
 
-Copyright (c) [2021] [Sieva Lucia]
+Copyright (c) [2022] [Sieva Lucia]
 
 All rights reserved.
 
