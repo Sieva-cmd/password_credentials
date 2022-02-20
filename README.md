@@ -8,7 +8,7 @@ Am a full stack  developer.
 
 
 ## website image
-![password locker]()
+![password locker](https://github.com/Sieva-cmd/password_credentials/blob/master/images/password-locker.png)
 
 
 
@@ -53,8 +53,8 @@ Click on the link below to view the website https://github.com/Sieva-cmd/passwor
 
 ## Running unit tests
 
-Run chmod +x run.py on the terminal
-After that run   ./run.py
+- Run chmod +x run.py on the terminal
+- After that run   ./run.py
 
 
 ## known Bugs
