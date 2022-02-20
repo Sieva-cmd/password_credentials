@@ -15,10 +15,10 @@ Am a full stack  developer.
 ## BDD
 |Behavior </br>Our program should haddle | Input Example </br>When it receives |Output Example </br> It should return |
 |:--------------------------------------:|:-----------------------------------:|:------------------------------------:|
-|Create an account with </br> username and password|Username:Sieva Password:wert  |Hello sieva .Your account </br> has been created succesfully|
-|:---------------------------------------------------------:|:---------------------------:|:-------------------------:|
+|Create an account with </br> username and password|Username:Sieva Password:wert|Hello sieva .Your account </br> has been created succesfully|
+|:--------------------------------------:|:------------------------------------:|:-----------------------------------:|
 |Login with username and password | Username:Sieva password:wert |welcome to password locker manager|
-|:-------------------------------------------------------:|:---------------------------:|:---------------------------:|
+|:--------------------------------------:|:------------------------------------:|:-----------------------------------:|
 |Create new account</br> with account name </br> username </br> and password |Acount:twitter <br> username:sieva </br> password:wert | Account credentials</br> for Twitter username:sieva </br> password:wert created succesfully |
 |:-------------------------------------:|:---------------------------------:|:---------------------------------------:|
 |Dispaly credentials|Enter account for the  </br> credentials you want to display| Here are the list of your credentials |
@@ -26,7 +26,7 @@ Am a full stack  developer.
 |Find credentials| Enter the account you want to search for|prints out the account you are searching for |
 |:-------------------------------------:|:---------------------------------:|:---------------------------------------:|
 |Delete credentials|Enter the account of the </br> credentials you want to delete|Account deleted successfully|
-|---------------------------------------|----------------------------------|------------------------------------------|
+|:-------------------------------------:|:---------------------------------:|:----------------------------------------:|
 
 
 ## set up instructions
