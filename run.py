@@ -54,6 +54,7 @@ def find_credentials(account):
 
 def credential_exist(account):
     return Credentials.if_credential_exist(account) 
+
 def generate_password():
     """
     generates a random password for user
@@ -99,7 +100,7 @@ def passlocker():
             print(f"Hello {username}. Welcome To password Locker manager")
             print('\n') 
     while True:
-        print("Use these short codes:\n CC --Create a new account.\n DC -Display Credentials. \n FC-- find credential. \n GP-generate random password. \n DL-Delete credential. \n Ex -Exit the application. \n")      
+        print("Use these short codes:\n CC --Create a new account.\n DC -Display Credentials. \n FC-- find credential. \n CP--copy password. \n DL-Delete credential. \n Ex -Exit the application. \n")      
         short_code =input().lower().strip()
         if short_code =='cc':
             print("Create New Credential")
@@ -155,7 +156,7 @@ def passlocker():
                 print(f"Your credentials for : {search_credential.account} have been deleted succesfully")    
                 print("\n")
             else:
-                print("That credential you want to delte doesnt exist") 
+                print("That credential you want to delete doesnt exist") 
         elif short_code =='gp':  
             password =generate_password()
             print(f"{password} Has been generated succesfully. You can proceed to your account")  

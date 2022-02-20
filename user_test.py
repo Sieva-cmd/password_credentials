@@ -1,5 +1,7 @@
 from cgi import test
 import unittest
+
+import pyperclip
 from user import User
 from user import Credentials
 
@@ -102,7 +104,13 @@ class TestCredentials(unittest.TestCase):
         """
         test to display all credentials
         """  
-        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)             
+        self.assertEqual(Credentials.display_credentials(),Credentials.credentials_list)  
+        
+    def test_copy_password(self):
+        self.new_credentials.save_details()
+        Credentials.copy_password("zxcvbnm")
+        self.assertEqual(self.new_credentials.password,pyperclip.paste())
+                       
 
 
 

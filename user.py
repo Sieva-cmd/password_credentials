@@ -76,7 +76,7 @@ class Credentials():
     @classmethod
     def find_credentialls(cls,account):
         """
-        method that takes in account_name and returns a credentials that matvh account name
+        method that takes in account_name and returns a credentials that match account name
         """  
         for credential in cls.credentials_list:
             if credential.account == account:
@@ -86,7 +86,9 @@ class Credentials():
     def copy_password(cls,account):
         found_credentials =Credentials.find_credentialls(account)
         pyperclip.copy(found_credentials.password)
-        pyperclip.paste()  
+        password_copied = pyperclip.paste()
+        print(password_copied)  
+        # pyperclip.paste()
         
     @classmethod
     def if_credential_exist(cls,account):
