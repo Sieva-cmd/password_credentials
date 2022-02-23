@@ -146,12 +146,11 @@ def passlocker():
                 print('\n')
         elif short_code =='dl':
             print("Enter the account name of the credential you want to delete")
-            search_name =input().lower()
+            search_name =input()
             if credential_exist(search_name):
                 search_credential =find_credentials(search_name)
                 print('_'*50)
-                # delete_credentials(credentials)
-                search_credential.delete_credentials()
+                delete_credentials(search_credential)
                 print('\n')
                 print(f"Your credentials for : {search_credential.account} have been deleted succesfully")    
                 print("\n")
@@ -160,6 +159,18 @@ def passlocker():
         elif short_code =='gp':  
             password =generate_password()
             print(f"{password} Has been generated succesfully. You can proceed to your account")  
+            
+            
+        elif short_code =='cp':
+            print("Enter the account of the password you want to copy")
+            my_password =input()
+            if credential_exist(my_password):
+                myPassword = find_credentials(my_password)
+                myPassword.copy_password(my_password)
+                print("password copied")
+                
+            else:print("No password copied")    
+                 
         elif short_code =='ex':
             print("Thank you for using Password Locker manager")
             break

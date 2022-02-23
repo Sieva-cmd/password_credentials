@@ -88,7 +88,7 @@ class Credentials():
         pyperclip.copy(found_credentials.password)
         password_copied = pyperclip.paste()
         print(password_copied)  
-        # pyperclip.paste()
+        pyperclip.paste()
         
     @classmethod
     def if_credential_exist(cls,account):
